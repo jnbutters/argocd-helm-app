@@ -1,0 +1,19 @@
+backend:
+  secret:
+    mongodb_uri:
+      username: admin
+      password: password
+  ingress:
+    enabled: true
+frontend:
+  ingress:
+    enabled: true
+
+ingress:
+  hosts:
+    - host:
+        domain: frontend.macbook.local
+        chart: frontend
+    - host:
+        domain: backend.macbook.local
+        chart: backend
